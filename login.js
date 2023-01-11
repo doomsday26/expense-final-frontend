@@ -5,6 +5,9 @@ let password = document.getElementById("password");
 let http = "http://localhost:3000";
 form.addEventListener("submit", login);
 document.getElementById("reset").addEventListener("click", forgot);
+window.addEventListener('DOMContentLoaded', (event) => {
+  localStorage.clear()
+});
 function login(e) {
   e.preventDefault();
   console.log(email.value, password.value);

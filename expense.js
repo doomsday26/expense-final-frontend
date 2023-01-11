@@ -20,6 +20,13 @@ let i = 0;
 const http = "http://localhost:3000/expense/";
 const http2 = "http://localhost:3000";
 
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  if(!localStorage.key(0)){
+    alert('login first')
+  }
+});
+
 //expenses adding
 form.addEventListener("submit", add);
 userList.addEventListener("click", removeItem);
@@ -86,6 +93,7 @@ while(paras[0]) {
       displayexpenses(res.Expenses);
     })
     .catch((err) => {
+      alert(err.success+err.status+ "you are not logged in, try login first")
       console.log("error found");
       console.log(err);
     });

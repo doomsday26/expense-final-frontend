@@ -3,6 +3,12 @@ let email = document.getElementById('email')
 let name= document.getElementById('name')
 let password= document.getElementById('password')
 let http="http://localhost:3000"
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    localStorage.clear()
+});
+
+
 form.addEventListener('submit',signup)
 
 
